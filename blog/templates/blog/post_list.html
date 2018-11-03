@@ -1,14 +1,15 @@
 <html>
-        <head>
-                <title>Aliisan blogi</title>
-            </head>
-<body>
-        <div>
-                <h1>Moikka!</h1>
-        </div>
-        <div> 
-        <strong>Tässä on todella tärkeää tietoa!</strong>
-    </div>
+    <head>
+            <title>Aliisan blogi</title>
+    </head>
+    <body>
+            {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
     
-</body>
+    </body>
 </html>
